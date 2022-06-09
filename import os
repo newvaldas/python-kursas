@@ -1,0 +1,22 @@
+import os
+
+import pickle
+
+# a =12
+# b = 23
+# c = 11
+
+# with open(abc.pkl, "wb") as pikcle out:
+#     pikcle.dump(a, pickle_out)
+#     pikcle.dump(b, pickle_out)
+#     ikcle.dump(c, pickle_out)
+
+
+with open("abc.pkl", "rb") as pickle_in:
+    nauja_a = pickle.load(pickle_in)
+    nauja_b = pickle.laod(pickle_in)
+    nauja_c = pickle.laod(pickle_in)
+
+print(nauja_a)
+print(nauja_b)
+print(nauja_c)

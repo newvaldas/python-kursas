@@ -1,0 +1,97 @@
+# # from abc import abstractmethod
+
+
+# # class Car:
+# #     def __init__(self):
+# #         self.age: int = 25
+
+# #     def return_type(self) -> str:
+# #         return 'My type is a Car! '
+
+# #     def made_from(self) -> str:
+# #         return "I made from metal!"
+
+
+# # class Audi:
+# #     def __init__(self, model: str):
+# #         self.model = model
+        
+# #     def return_model(self) -> str:
+# #         return self.model
+
+# # class BMW(Car):
+
+# #     def return_avarage_age(self, age: float) -> float:
+        
+# # my_car = Audi(model='A7')
+# # my_another_car = BMW()
+
+# # print(my_car.return_model())
+# # print(my_car.return_type())
+# # print(my_another_car.return_avarage_age(5.5))
+# # print(my_another_car.made_from)
+
+# # from abc import ABC, abstractmethod
+
+# # class MyCar(ABC):
+# #     def method_one(self):
+# #         pass
+
+# #     @abstractmethod    
+# #     def method_two(self):
+# #         pass
+
+# # class MyClass(MyCar):
+# #     def method_one(self):
+# #         return 'Anything'
+
+
+
+class Car:
+    def __init__(self, age: float):
+        self.age: float = age
+
+    def return_type(self) -> str:
+        return 'My type is a Car! '
+
+    def made_from(self) -> str:
+        return "I made from metal!"
+
+    def return_age(self) -> float:
+        return self.age
+
+
+class Audi:
+    def __init__(self, model: str):
+        self.age = 25
+        super().__init__(self.age)
+        self.model = model
+        
+    def return_model(self) -> str:
+        return self.model
+
+class BMW(Car):
+    def return_avarage_age(self, age: float) -> float:
+
+        
+        my_car = Audi(model='A7')
+# my_another_car = BMW()
+
+print(my_car.made_from())
+print(my_car.return_age())
+# print(my_another_car.made_from())
+
+from random import randint 
+from datetime import datetime
+
+class RandomDatetime:
+    def __init__(self, num: int):
+        self.num = num
+      
+    def get_random_int_nr(self) -> int:
+        return randint(0, self.num)
+
+
+nr = RandomDatetime(25)
+print(nr.get_random_int_nr())
+

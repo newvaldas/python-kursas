@@ -1,0 +1,67 @@
+# # 1 uzduotis
+# class Car:
+#     def __init__(self, made_year: int, model: str, fuel_type: str):
+
+#         self.made_year = made_year
+#         self.model = model
+#         self.fuel_type = fuel_type
+        
+#         print(f'Car year: {self.made_year}, Model: {self.model}, Fuel type: {self.fuel_type}')
+
+#     def return_fuel_type(self) -> str:
+#         return self.fuel_type
+
+
+#     @staticmethod
+#     def driving() -> str:
+#         return "Now driving"
+
+#     @staticmethod
+#     def parked() -> str:
+#         return "Car is not moving"
+
+#     @staticmethod
+#     def refueling() -> str:
+#         return "Car is gets fueal refill "
+
+# # my_car = Car(made_year=2012, model='Audi', fuel_type='Diesel')
+
+# class ElectricCar(Car):
+
+#     def refueling(self) -> str:
+#         return "Battery fully charged"
+
+#     def drive_autonomous(self) -> str:
+#         return "I'm driving myself! "
+
+# tesla = ElectricCar(made_year=2015, model='model 3', fuel_type='electric vechile')
+
+# print(tesla.refueling())
+# print(tesla.drive_autonomous())
+
+
+#2 uzduotis
+from datetime import datetime
+
+class Worker:
+    def __init__(self, name: str, hourly_wage: float, start_date: datetime):
+        self.name = name
+        self.hourly_wage = hourly_wage
+        self.start_date = start_date
+
+    def _days_worked(self) -> int:
+        now = datetime.now()
+        return (now - self.start_date).days
+
+    def money_made(self) -> float:
+        return self._days_worked() * 8 * self.hourly_wage
+
+
+# print(worked._days_worked())
+
+#Turėtų metodą paskaiciuoti_atlyginima, kuris panaudodamas aukščiau aprašytu metodu, paskaičiuotų bendrą atlyginimą (turint omeny, kad darbuotojas dirba 8 valandas per dieną)
+
+money = Worker(name='John', hourly_wage=9.5, start_date=datetime(2022, 5, 11))
+
+print(money.money_made())
+    
