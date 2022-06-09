@@ -1,0 +1,6 @@
+2022-06-08 20:41:15,219:ERROR:__main__:Dalyba is nulio
+Traceback (most recent call last):
+  File "/Users/valkri/Documents/python kursas/loggin_course/main.py", line 106, in dalyba
+    rezultatas = a / b
+ZeroDivisionError: division by zero
+2022-06-08 20:41:15,220:INFO:__main__:Dalyba: 20 / 0 = None
