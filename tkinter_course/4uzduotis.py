@@ -6,7 +6,7 @@
 #  uždarytų programos langą
 
 
-from tkinter import *
+from tkinter import Tk, END, StringVar, Menu, Label, Button, Entry, SUNKEN, W, X, BOTTOM
 
 def submit():
     user_input.set(field.get())
@@ -17,7 +17,7 @@ def submit():
 
 def delete():       # delete funkcija
     result["text"] = ""
-    field.delete(0, 500)
+    field.delete(0, END)
     status["text"] = "Deleted" #Būtų rodoma "Išvalyta", kai ištrinamas pasisveikinimo tekstas
 
 def restore():
@@ -51,7 +51,7 @@ name = Label(window, text="Enter your name")
 button = Button(window, text= "Enter", command=submit)
 field = Entry(window)
 result = Label(window, text="")
-window.bind("<Return>", lambda event: submit())     # <- veikimas su Enter
+window.bind("<Return>", lambda event: submit())     # <- veikimas su Enter (lamda kaip funkcija)
 window.bind("<Escape>", lambda event: window.destroy())   # <- veikimas su Escape
 
 name.pack()

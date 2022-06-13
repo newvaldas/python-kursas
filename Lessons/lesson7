@@ -1,49 +1,49 @@
-# # from abc import abstractmethod
+from abc import abstractmethod
 
 
-# # class Car:
-# #     def __init__(self):
-# #         self.age: int = 25
+class Car:
+    def __init__(self):
+        self.age: int = 25
 
-# #     def return_type(self) -> str:
-# #         return 'My type is a Car! '
+    def return_type(self) -> str:
+        return 'My type is a Car! '
 
-# #     def made_from(self) -> str:
-# #         return "I made from metal!"
+    def made_from(self) -> str:
+        return "I made from metal!"
 
 
-# # class Audi:
-# #     def __init__(self, model: str):
-# #         self.model = model
+class Audi:
+    def __init__(self, model: str):
+        self.model = model
         
-# #     def return_model(self) -> str:
-# #         return self.model
+    def return_model(self) -> str:
+        return self.model
 
-# # class BMW(Car):
+class BMW(Car):
 
-# #     def return_avarage_age(self, age: float) -> float:
+    def return_avarage_age(self, age: float) -> float:
         
-# # my_car = Audi(model='A7')
-# # my_another_car = BMW()
+my_car = Audi(model='A7')
+my_another_car = BMW()
 
-# # print(my_car.return_model())
-# # print(my_car.return_type())
-# # print(my_another_car.return_avarage_age(5.5))
-# # print(my_another_car.made_from)
+print(my_car.return_model())
+print(my_car.return_type())
+print(my_another_car.return_avarage_age(5.5))
+print(my_another_car.made_from)
 
-# # from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
-# # class MyCar(ABC):
-# #     def method_one(self):
-# #         pass
+class MyCar(ABC):
+    def method_one(self):
+        pass
 
-# #     @abstractmethod    
-# #     def method_two(self):
-# #         pass
+    @abstractmethod    
+    def method_two(self):
+        pass
 
-# # class MyClass(MyCar):
-# #     def method_one(self):
-# #         return 'Anything'
+class MyClass(MyCar):
+    def method_one(self):
+        return 'Anything'
 
 
 
