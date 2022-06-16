@@ -1,131 +1,118 @@
-# # # def dalyba(a, b):
-# # #     return a / b
+def dalyba(a, b):
+    return a / b
 
-# # # a = 10
-# # # b = 5
+a = 10
+b = 5
 
-# # # padalinom = dalyba(a, b)
-# # # print(f"Dalyba: {a} / {b} = {padalinom}")
+padalinom = dalyba(a, b)
+print(f"Dalyba: {a} / {b} = {padalinom}")
 
-# # # # Dalyba: 10 / 5 = 2.0
+# Dalyba: 10 / 5 = 2.0
 
-# # # import logging
+import logging
 
-# # # def dalyba(a, b):
-# # #     return a / b
+def dalyba(a, b):
+    return a / b
 
-# # # a = 10
-# # # b = 5
+a = 10
+b = 5
 
-# # # # padalinom = dalyba(a, b)
-# # # # logging.warning(f"Dalyba: {a} / {b} = {padalinom}")
+padalinom = dalyba(a, b)
+logging.warning(f"Dalyba: {a} / {b} = {padalinom}")
 
-# # # # # WARNING:root:Dalyba: 10 / 5 = 2.0
+# WARNING:root:Dalyba: 10 / 5 = 2.0
 
-# # # # import logging
+import logging
 
-# # # # logging.basicConfig(
-# # # #     filename='aritmetika.log', 
-# # # #     level=logging.DEBUG,
-# # # #     format="%(asctime)s:%(levelname)s:%(messege)s",)
+logging.basicConfig(
+    filename='aritmetika.log', 
+    level=logging.DEBUG,
+    format="%(asctime)s:%(levelname)s:%(messege)s",)
 
-# # # import logging
+import logging
 
-# # # logging.basicConfig(filename='asmenys.log', level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
+logging.basicConfig(filename='asmenys.log', level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
 
-# # # class Asmuo:
+class Asmuo:
 
-# # #     def __init__(self, vardas, pavarde):
-# # #         self.vardas = vardas
-# # #         self.pavarde = pavarde
-# # #         logging.info(f"Sukurtas darbuotojas: {self.vardas} {self.pavarde}")
+    def __init__(self, vardas, pavarde):
+        self.vardas = vardas
+        self.pavarde = pavarde
+        logging.info(f"Sukurtas darbuotojas: {self.vardas} {self.pavarde}")
 
-# # # tadas = Asmuo("Tomas", "Kucinskas")
-# # # rokas = Asmuo("Rokas", "Radzevicius")
-
-
-# # import logging
-# # logger = logging.getLogger(__name__)
-# # file_handler = logging.FileHandler('aritmetika.log') #bus logai rasomi i aritmetikia.log
-# # logger.addHandler(file_handler)
-
-# # logger.setLevel(logging.DEBUG)
-
-# # formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(name)s:%(message)s')
-# # file_handler.setFormatter(formatter)
-
-# # def dalyba(a, b):
-# #     return a / b
-
-# # a = 10
-# # b = 5
-
-# # padalinom = dalyba(a, b)
-# # logger.info(f"Dalyba: {a} / {b} = {padalinom}")
+tadas = Asmuo("Tomas", "Kucinskas")
+rokas = Asmuo("Rokas", "Radzevicius")
 
 
-# # import logging
-# # logger = logging.getLogger(__name__)
-# # file_handler = logging.FileHandler('aritmetika.log')
-# # logger.addHandler(file_handler)
+import logging
+logger = logging.getLogger(__name__)
+file_handler = logging.FileHandler('aritmetika.log') #bus logai rasomi i aritmetikia.log
+logger.addHandler(file_handler)
 
-# # logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.DEBUG)
 
-# # formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(name)s:%(message)s')
-# # file_handler.setFormatter(formatter)
+formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(name)s:%(message)s')
+file_handler.setFormatter(formatter)
 
-# # stream_handler = logging.StreamHandler()
-# # stream_handler.setFormatter(formatter)
-# # logger.addHandler(stream_handler)
+def dalyba(a, b):
+    return a / b
 
-# # def dalyba(a, b):
-# #     return a / b
+a = 10
+b = 5
 
-# # a = 10
-# # b = 5
+padalinom = dalyba(a, b)
+logger.info(f"Dalyba: {a} / {b} = {padalinom}")
 
-# # padalinom = dalyba(a, b)
-# # logger.info(f"Dalyba: {a} / {b} = {padalinom}")
 
-# import logging
-# logger = logging.getLogger(__name__)
-# file_handler = logging.FileHandler('aritmetika.log')
-# logger.addHandler(file_handler)
+import logging
+logger = logging.getLogger(__name__)
+file_handler = logging.FileHandler('aritmetika.log')
+logger.addHandler(file_handler)
 
-# logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.DEBUG)
 
-# formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(name)s:%(message)s')
-# file_handler.setFormatter(formatter)
+formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(name)s:%(message)s')
+file_handler.setFormatter(formatter)
 
-# stream_handler = logging.StreamHandler()
-# stream_handler.setFormatter(formatter)
-# logger.addHandler(stream_handler)
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
+logger.addHandler(stream_handler)
 
-# def dalyba(a, b):
-#     try:
-#         rezultatas = a / b
+def dalyba(a, b):
+    return a / b
 
-#     except ZeroDivisionError:
-#         logger.exception("Dalyba is nulio")
-#     else:
-#         return rezultatas
+a = 10
+b = 5
 
-# a = 20
-# b = 0
+padalinom = dalyba(a, b)
+logger.info(f"Dalyba: {a} / {b} = {padalinom}")
 
-# padalinom = dalyba(a, b)
-# logger.info(f"Dalyba: {a} / {b} = {padalinom}")
+import logging
+logger = logging.getLogger(__name__)
+file_handler = logging.FileHandler('aritmetika.log')
+logger.addHandler(file_handler)
 
-class Kate:
-    def __init__(self, spalva, kojos):
-        self.spalva = spalva
-        self.kojos = kojos
+logger.setLevel(logging.DEBUG)
 
-kate1 = Kate("pilka", 4)
-kate2 = Kate("juoda", 3)
+formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(name)s:%(message)s')
+file_handler.setFormatter(formatter)
 
-print(kate1.spalva)
-print(kate2.kojos)
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
+logger.addHandler(stream_handler)
 
-# juoda
-# 3
+def dalyba(a, b):
+    try:
+        rezultatas = a / b
+
+    except ZeroDivisionError:
+        logger.exception("Dalyba is nulio")
+    else:
+        return rezultatas
+
+a = 20
+b = 0
+
+padalinom = dalyba(a, b)
+logger.info(f"Dalyba: {a} / {b} = {padalinom}")
+

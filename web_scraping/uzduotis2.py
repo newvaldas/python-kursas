@@ -1,4 +1,3 @@
-from calendar import month
 import csv
 
 from bs4 import BeautifulSoup
