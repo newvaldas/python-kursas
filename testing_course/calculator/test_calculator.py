@@ -1,4 +1,5 @@
 import unittest
+from unittest.mock import MagicMock #
 from calculator import add, subtract, multiply, divide
 
 class TestCalculator(unittest.TestCase):

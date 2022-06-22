@@ -1,15 +1,19 @@
-def add(x, y):
-    result = x + y
-    return result 
+from random import randint
 
-def subtract(x, y):
-    result = x - y
-    return result
+def add(x: int, y: int) -> int:
+    return x + y
+    
 
-def multiply(x, y):
-    result = x * y
-    return result
+def subtract(x: int, y: int) -> int:
+    return x - y
+   
 
-def divide(x, y):
-    result = x / y
-    return result
+def multiply(x: int, y: int) -> int:
+    return x * y
+   
+
+def divide(x: int, y: int) -> int:
+    s = multiply(x, y)
+    return x / y
+  
+  
